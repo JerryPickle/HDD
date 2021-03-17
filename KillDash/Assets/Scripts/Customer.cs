@@ -141,12 +141,22 @@ public class Customer : MonoBehaviour
 
     }
 
+    public bool equals(Customer customer2)
+    {
+
+        if (this.favDrink == customer2.favDrink)
+        {
+
+        }
+
+    }
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //CreateCustomer(); This is used for testing
+        //CreateCustomer(); //This is used for testing
     }
 
     // Update is called once per frame
