@@ -43,20 +43,19 @@ public class Customer : MonoBehaviour
         }
         hateDrink = ((Drinks)newNumDrink).ToString("g");
 
-        print(mood);
+        /*print(mood);
         print(howTip);
         print(favDrink);
         print(favPizza);
         print(favSideFood);
         print(hatePizza);
-        print(hateDrink);
+        print(hateDrink);*/
 
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        CreateCustomer();
 
     }
 
