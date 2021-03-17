@@ -32,15 +32,15 @@ public class Customer
         }
 
        
-        if(howTip == "-1")
+        if(howTip.Equals("-1"))
         {
             howTip = ((Tips)Random.Range(0, 2)).ToString("g");
         }
         
 
-        if (favDrink == "-1")
+        if (favDrink.Equals("-1"))
         {
-            if(hateDrink == "-1")
+            if(hateDrink.Equals("-1"))
             {
                 favDrink = ((Drinks)Random.Range(0, 4)).ToString("g");
             }
@@ -48,16 +48,16 @@ public class Customer
             {
                 favDrink = hateDrink;
             }
-            while(favDrink == hateDrink)
+            while(favDrink.Equals(hateDrink))
             {
                 favDrink = ((Drinks)Random.Range(0,4)).ToString("g");
             }
         }
            
 
-        if(favPizza == "-1")
+        if(favPizza.Equals("-1"))
         {
-            if (hatePizza == "-1")
+            if (hatePizza.Equals("-1"))
             {
                 favPizza = ((Pizza)Random.Range(0, 4)).ToString("g");
             }
@@ -65,7 +65,7 @@ public class Customer
             {
                 favPizza = hatePizza;
             }
-            while (favPizza == hatePizza)
+            while (favPizza.Equals(hatePizza))
             {
                 favPizza = ((Pizza)Random.Range(0, 4)).ToString("g");
             }
@@ -73,15 +73,15 @@ public class Customer
         }
         
 
-        if(favSideFood == "-1")
+        if(favSideFood.Equals("-1"))
         {
             favSideFood = ((SideFood)Random.Range(0, 4)).ToString("g");
         }
 
 
-       if (hatePizza == "-1")
+       if (hatePizza.Equals("-1"))
         {
-            if (favPizza == "-1")
+            if (favPizza.Equals("-1"))
             {
                 hatePizza = ((Pizza)Random.Range(0, 4)).ToString("g");
             }
@@ -89,7 +89,7 @@ public class Customer
             {
                 hatePizza = favPizza;
             }
-            while (hatePizza == favPizza)
+            while (hatePizza.Equals(favPizza))
             {
                 hatePizza = ((Pizza)Random.Range(0,4)).ToString("g");
             }
@@ -97,9 +97,9 @@ public class Customer
 
         }
         
-       if (hateDrink == "-1")
+       if (hateDrink.Equals("-1"))
         {
-            if (favDrink == "-1")
+            if (favDrink.Equals("-1"))
             {
                 hateDrink = ((Drinks)Random.Range(0, 4)).ToString("g");
             }
@@ -107,7 +107,7 @@ public class Customer
             {
                 hateDrink = favDrink;
             }
-            while (hateDrink == favDrink)
+            while (hateDrink.Equals(favDrink))
             {
                 hateDrink = ((Drinks)Random.Range(0, 4)).ToString("g");
             }
