@@ -17,6 +17,7 @@ public class Customer : MonoBehaviour
     string favSideFood;
     string hatePizza;
     string hateDrink;
+    SpriteRenderer thisSprite;
 
     private void CreateCustomer()
     {

@@ -5,9 +5,9 @@ using UnityEngine;
 public class Level1 : MonoBehaviour
 {
 
-    private Customer[] customers;
+    private Customer[] customersInitialized;
     private PlayerController player;
-    [SerializeField]private SpriteRenderer[] customerSprites;
+    [SerializeField]private Customer[] customerSprites;
 
 
     // Start is called before the first frame update
