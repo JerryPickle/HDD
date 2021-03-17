@@ -51,8 +51,26 @@ public class Level1 : MonoBehaviour
         {
             Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
-            newCustomer.CreateCustomer();
-            newCustomer.favPizza = badguy.favPizza;
+
+                newCustomer.ClearCustomer();
+                newCustomer.CreateCustomer();
+                newCustomer.favPizza = badguy.favPizza;
+        
+            while (
+                newCustomer.favPizza == badguy.favPizza
+                && newCustomer.favDrink == badguy.favDrink
+                && newCustomer.favSideFood == badguy.favSideFood
+                && newCustomer.mood == badguy.mood
+                && newCustomer.howTip == badguy.howTip
+                && newCustomer.hateDrink == badguy.hateDrink
+                && newCustomer.hatePizza == badguy.hatePizza
+                )
+            {
+                newCustomer.ClearCustomer();
+                newCustomer.CreateCustomer();
+                newCustomer.favPizza = badguy.favPizza;
+            }
+            
             CustomersList.Add(newCustomer);
             currentCustomers++;
         }
@@ -63,8 +81,25 @@ public class Level1 : MonoBehaviour
         {
             Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
+
+            newCustomer.ClearCustomer();
             newCustomer.CreateCustomer();
             newCustomer.favDrink = badguy.favDrink;
+
+            while (
+                newCustomer.favPizza == badguy.favPizza
+                && newCustomer.favDrink == badguy.favDrink
+                && newCustomer.favSideFood == badguy.favSideFood
+                && newCustomer.mood == badguy.mood
+                && newCustomer.howTip == badguy.howTip
+                && newCustomer.hateDrink == badguy.hateDrink
+                && newCustomer.hatePizza == badguy.hatePizza
+                )
+            {
+                newCustomer.ClearCustomer();
+                newCustomer.CreateCustomer();
+                newCustomer.favDrink = badguy.favDrink;
+            }
             CustomersList.Add(newCustomer);
             currentCustomers++;
         }
@@ -75,8 +110,26 @@ public class Level1 : MonoBehaviour
         {
             Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
+
+            newCustomer.ClearCustomer();
             newCustomer.CreateCustomer();
             newCustomer.favSideFood = badguy.favSideFood;
+
+            while (
+                newCustomer.favPizza == badguy.favPizza
+                && newCustomer.favDrink == badguy.favDrink
+                && newCustomer.favSideFood == badguy.favSideFood
+                && newCustomer.mood == badguy.mood
+                && newCustomer.howTip == badguy.howTip
+                && newCustomer.hateDrink == badguy.hateDrink
+                && newCustomer.hatePizza == badguy.hatePizza
+                )
+            {
+                newCustomer.ClearCustomer();
+                newCustomer.CreateCustomer();
+                newCustomer.favSideFood = badguy.favSideFood;
+            }
+
             CustomersList.Add(newCustomer);
             currentCustomers++;
         }
@@ -87,8 +140,26 @@ public class Level1 : MonoBehaviour
         {
             Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
+
+            newCustomer.ClearCustomer();
             newCustomer.CreateCustomer();
             newCustomer.hatePizza = badguy.hatePizza;
+            
+            while (
+                newCustomer.favPizza == badguy.favPizza
+                && newCustomer.favDrink == badguy.favDrink
+                && newCustomer.favSideFood == badguy.favSideFood
+                && newCustomer.mood == badguy.mood
+                && newCustomer.howTip == badguy.howTip
+                && newCustomer.hateDrink == badguy.hateDrink
+                && newCustomer.hatePizza == badguy.hatePizza
+                )
+            {
+                newCustomer.ClearCustomer();
+                newCustomer.CreateCustomer();
+                newCustomer.hatePizza = badguy.hatePizza;
+            }
+            
             CustomersList.Add(newCustomer);
             currentCustomers++;
         }
@@ -99,8 +170,26 @@ public class Level1 : MonoBehaviour
         {
             Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
+
+            newCustomer.ClearCustomer();
             newCustomer.CreateCustomer();
             newCustomer.hateDrink = badguy.hateDrink;
+
+            while (
+                newCustomer.favPizza == badguy.favPizza
+                && newCustomer.favDrink == badguy.favDrink
+                && newCustomer.favSideFood == badguy.favSideFood
+                && newCustomer.mood == badguy.mood
+                && newCustomer.howTip == badguy.howTip
+                && newCustomer.hateDrink == badguy.hateDrink
+                && newCustomer.hatePizza == badguy.hatePizza
+                )
+            {
+                newCustomer.ClearCustomer();
+                newCustomer.CreateCustomer();
+                newCustomer.hateDrink = badguy.hateDrink;
+            }
+
             CustomersList.Add(newCustomer);
             currentCustomers++;
         }
@@ -111,8 +200,26 @@ public class Level1 : MonoBehaviour
         {
             Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
+
+            newCustomer.ClearCustomer();
             newCustomer.CreateCustomer();
             newCustomer.howTip = badguy.howTip;
+
+            while (
+                newCustomer.favPizza == badguy.favPizza
+                && newCustomer.favDrink == badguy.favDrink
+                && newCustomer.favSideFood == badguy.favSideFood
+                && newCustomer.mood == badguy.mood
+                && newCustomer.howTip == badguy.howTip
+                && newCustomer.hateDrink == badguy.hateDrink
+                && newCustomer.hatePizza == badguy.hatePizza
+                )
+            {
+                newCustomer.ClearCustomer();
+                newCustomer.CreateCustomer();
+                newCustomer.howTip = badguy.howTip;
+            }
+
             CustomersList.Add(newCustomer);
             currentCustomers++;
         }
@@ -123,8 +230,26 @@ public class Level1 : MonoBehaviour
         {
             Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
+
+            newCustomer.ClearCustomer();
             newCustomer.CreateCustomer();
             newCustomer.mood = badguy.mood;
+
+            while (
+               newCustomer.favPizza == badguy.favPizza
+               && newCustomer.favDrink == badguy.favDrink
+               && newCustomer.favSideFood == badguy.favSideFood
+               && newCustomer.mood == badguy.mood
+               && newCustomer.howTip == badguy.howTip
+               && newCustomer.hateDrink == badguy.hateDrink
+               && newCustomer.hatePizza == badguy.hatePizza
+               )
+            {
+                newCustomer.ClearCustomer();
+                newCustomer.CreateCustomer();
+                newCustomer.mood = badguy.mood;
+            }
+
             CustomersList.Add(newCustomer);
             currentCustomers++;
         }
@@ -138,8 +263,25 @@ public class Level1 : MonoBehaviour
         {
             Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
+
+            newCustomer.ClearCustomer();
             newCustomer.CreateCustomer();
             CustomersList.Add(newCustomer);
+
+            while (
+               newCustomer.favPizza == badguy.favPizza
+               && newCustomer.favDrink == badguy.favDrink
+               && newCustomer.favSideFood == badguy.favSideFood
+               && newCustomer.mood == badguy.mood
+               && newCustomer.howTip == badguy.howTip
+               && newCustomer.hateDrink == badguy.hateDrink
+               && newCustomer.hatePizza == badguy.hatePizza
+               )
+            {
+                newCustomer.ClearCustomer();
+                newCustomer.CreateCustomer();
+            }
+
             currentCustomers++;
 
         }
