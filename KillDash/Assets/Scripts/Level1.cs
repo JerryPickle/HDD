@@ -14,6 +14,8 @@ public class Level1 : MonoBehaviour
     [SerializeField]public int decoyRangeMax = 3;
     [SerializeField]public int decoyRangeMin = 1;
     [SerializeField] public int totalCustomers = 20;
+
+
     
 
     // Start is called before the first frame update

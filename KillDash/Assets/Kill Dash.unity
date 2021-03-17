@@ -235,7 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f63030a26f975b40a6a5fe6c509211d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomersList:
+  CustomersList: []
+  customerPrefabs:
   - {fileID: 5056752870075096391, guid: a95ac0ed25936ac45b99ff12be0a8113, type: 3}
   - {fileID: 2732504730402832108, guid: 53e8c9ec2e6130a4c88755ed378376b7, type: 3}
   - {fileID: 8034715054128627549, guid: ec7235c2cc9571e4a8d9c3e3be5d650c, type: 3}
@@ -256,7 +257,6 @@ MonoBehaviour:
   - {fileID: -4420112615521915902, guid: 4528f95f65c20524291ee679ad7eabfd, type: 3}
   - {fileID: -4420112615521915902, guid: 4528f95f65c20524291ee679ad7eabfd, type: 3}
   - {fileID: -4420112615521915902, guid: 4528f95f65c20524291ee679ad7eabfd, type: 3}
-  customerPrefabs: []
   decoyRangeMax: 3
   decoyRangeMin: 1
   totalCustomers: 20
