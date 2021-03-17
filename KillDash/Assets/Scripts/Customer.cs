@@ -146,7 +146,7 @@ public class Customer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CreateCustomer();
+        //CreateCustomer(); This is used for testing
     }
 
     // Update is called once per frame
