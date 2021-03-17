@@ -10,7 +10,6 @@ public class Customer
     enum Pizza {Cheese, Pepperoni, Pineapple, Meat_Lovers, The_Garlic_Special}
     enum SideFood {Fries, Tots, Chips, Breadsticks, The_Garlic_Surprise}
 
-    public static int CustomerCount = 0;
     public int mood = -1;
     public string howTip = "-1";
     public string favDrink = "-1";
@@ -115,9 +114,7 @@ public class Customer
         }
 
         // Adds one to the total customers created in the game.
-        CustomerCount++;
 
-        Debug.Log("Customer = " + CustomerCount);
         Debug.Log("Mood = " + mood);
         Debug.Log("How Tip = " +howTip);
         Debug.Log("favDrink = " + favDrink);
@@ -133,7 +130,7 @@ public class Customer
     // Start is called before the first frame update
     void Start()
     {
-        CreateCustomer();
+
     }
 
     // Update is called once per frame
