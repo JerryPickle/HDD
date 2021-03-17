@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4095914472767902196}
   - component: {fileID: 5680770817448427989}
+  - component: {fileID: -4420112615521915902}
   m_Layer: 3
   m_Name: ralph_masters_base
   m_TagString: Customer
@@ -82,3 +83,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4420112615521915902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160145676569367831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7cda6975d572b040aad0999432d28f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mood: -1
+  howTip: -1
+  favDrink: -1
+  favPizza: -1
+  favSideFood: -1
+  hatePizza: -1
+  hateDrink: -1
+  thisSprite: {fileID: 5680770817448427989}

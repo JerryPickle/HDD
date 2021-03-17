@@ -95,3 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cda6975d572b040aad0999432d28f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mood: -1
+  howTip: -1
+  favDrink: -1
+  favPizza: -1
+  favSideFood: -1
+  hatePizza: -1
+  hateDrink: -1
+  thisSprite: {fileID: 6180706929555332320}

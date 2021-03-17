@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Customer 
+public class Customer : MonoBehaviour
 {
     int[] waitTimes = { 55, 45, 35 };
     enum Tips {Extra, Normal, None}
@@ -17,7 +17,7 @@ public class Customer
     public string favSideFood = "-1";
     public string hatePizza = "-1";
     public string hateDrink = "-1";
-    SpriteRenderer thisSprite;
+    [SerializeField]SpriteRenderer thisSprite;
 
 
 
