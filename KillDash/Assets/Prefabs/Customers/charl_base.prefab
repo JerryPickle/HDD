@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7768698727025811215}
   - component: {fileID: 5549316385960115882}
   - component: {fileID: 8034715054128627549}
+  - component: {fileID: 7823776301812997664}
   m_Layer: 3
   m_Name: charl_base
   m_TagString: Customer
@@ -102,4 +103,31 @@ MonoBehaviour:
   favSideFood: -1
   hatePizza: -1
   hateDrink: -1
+  isKiller: 0
   thisSprite: {fileID: 5549316385960115882}
+--- !u!61 &7823776301812997664
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946645595825965848}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.018114686, y: -0.94196177}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.31, y: 3}
+    newSize: {x: 1.31, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0563948, y: 1.1160765}
+  m_EdgeRadius: 0
