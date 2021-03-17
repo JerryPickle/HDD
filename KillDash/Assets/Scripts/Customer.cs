@@ -10,16 +10,16 @@ public class Customer : MonoBehaviour
     enum Pizza {Cheese, Pepperoni, Pineapple, Meat_Lovers, The_Garlic_Special}
     enum SideFood {Fries,Tots,Chips,Breadsticks,The_Garlic_Surprise}
 
-    int mood;
-    string howTip;
-    string favDrink;
-    string favPizza;
-    string favSideFood;
-    string hatePizza;
-    string hateDrink;
+    public int mood;
+    public string howTip;
+    public string favDrink;
+    public string favPizza;
+    public string favSideFood;
+    public string hatePizza;
+    public string hateDrink;
     SpriteRenderer thisSprite;
 
-    private void CreateCustomer()
+    public void CreateCustomer()
     {
 
         mood = waitTimes[Random.Range(0, 2)];
