@@ -9,6 +9,7 @@ public class Level1 : MonoBehaviour
     public List<Customer> CustomersList = new List<Customer>();
     private Customer badguy = new Customer();
     private PlayerController player;
+    int currentCustomers = 0;
     [SerializeField]private Customer[] customerSprites;
     [SerializeField]public int decoyRangeMax = 3;
     [SerializeField]public int decoyRangeMin = 1;
@@ -32,7 +33,7 @@ public class Level1 : MonoBehaviour
         // Create the Baddy at Complete Random, and add him to a Mast list of Customers.
         badguy.CreateCustomer();
         CustomersList.Add(badguy);
-
+        currentCustomers++;
 
 
         //Create at least one other person that shares the same trait for every trait, and also add them to the list.
@@ -42,9 +43,10 @@ public class Level1 : MonoBehaviour
         for (int i = 0; i < favPizzaDecoys; i++)
         {
             decoy1[i] = new Customer();
-            CustomersList.Add(decoy1[i]);
-            decoy1[i].favPizza = badguy.favPizza;
             decoy1[i].CreateCustomer();
+            decoy1[i].favPizza = badguy.favPizza;
+            CustomersList.Add(decoy1[i]);
+            currentCustomers++;
         }
 
         int favDrinkDecoys = Random.Range(decoyRangeMin, decoyRangeMax);
@@ -53,9 +55,10 @@ public class Level1 : MonoBehaviour
         for (int i = 0; i < favDrinkDecoys; i++)
         {
             decoy2[i] = new Customer();
-            CustomersList.Add(decoy2[i]);
-            decoy2[i].favDrink = badguy.favDrink;
             decoy2[i].CreateCustomer();
+            decoy2[i].favDrink = badguy.favDrink;
+            CustomersList.Add(decoy2[i]);
+            currentCustomers++;
         }
 
         int favSideDecoys = Random.Range(decoyRangeMin, decoyRangeMax);
@@ -64,9 +67,10 @@ public class Level1 : MonoBehaviour
         for (int i = 0; i < favSideDecoys; i++)
         {
             decoy3[i] = new Customer();
-            CustomersList.Add(decoy3[i]);
-            decoy3[i].favSideFood = badguy.favSideFood;
             decoy3[i].CreateCustomer();
+            decoy3[i].favSideFood = badguy.favSideFood;
+            CustomersList.Add(decoy3[i]);
+            currentCustomers++;
         }
 
         int HatePizzaDecoys = Random.Range(decoyRangeMin, decoyRangeMax);
@@ -75,9 +79,10 @@ public class Level1 : MonoBehaviour
         for (int i = 0; i < HatePizzaDecoys; i++)
         {
             decoy4[i] = new Customer();
-            CustomersList.Add(decoy4[i]);
-            decoy4[i].hatePizza = badguy.hatePizza;
             decoy4[i].CreateCustomer();
+            decoy4[i].hatePizza = badguy.hatePizza;
+            CustomersList.Add(decoy4[i]);
+            currentCustomers++;
         }
 
         int HateDrinkDecoys = Random.Range(decoyRangeMin, decoyRangeMax);
@@ -86,9 +91,10 @@ public class Level1 : MonoBehaviour
         for (int i = 0; i < HateDrinkDecoys; i++)
         {
             decoy5[i] = new Customer();
-            CustomersList.Add(decoy5[i]);
-            decoy5[i].hateDrink = badguy.hateDrink;
             decoy5[i].CreateCustomer();
+            decoy5[i].hateDrink = badguy.hateDrink;
+            CustomersList.Add(decoy5[i]);
+            currentCustomers++;
         }
 
         int HowTipDecoys = Random.Range(decoyRangeMin, decoyRangeMax);
@@ -97,9 +103,10 @@ public class Level1 : MonoBehaviour
         for (int i = 0; i < HowTipDecoys; i++)
         {
             decoy6[i] = new Customer();
-            CustomersList.Add(decoy6[i]);
-            decoy6[i].howTip =  badguy.howTip;
             decoy6[i].CreateCustomer();
+            decoy6[i].howTip =  badguy.howTip;
+            CustomersList.Add(decoy6[i]);
+            currentCustomers++;
         }
 
         int MoodDecoys = Random.Range(decoyRangeMin, decoyRangeMax);
@@ -108,23 +115,24 @@ public class Level1 : MonoBehaviour
         for (int i = 0; i < MoodDecoys; i++)
         {
             decoy7[i] = new Customer();
-            CustomersList.Add(decoy7[i]);
-            decoy7[i].mood = badguy.mood;
             decoy7[i].CreateCustomer();
+            decoy7[i].mood = badguy.mood;
+            CustomersList.Add(decoy7[i]);
+            currentCustomers++;
         }
 
 
         // Figure out how many Customers are left to fill the roster and create that many at random. Then add them to the list.
 
-        int customersRemaining = totalCustomers - Customer.CustomerCount;
+        int customersRemaining = totalCustomers - currentCustomers;
         Customer[] customerFill = new Customer[customersRemaining]; 
 
         for (int i = 0; i < customersRemaining; i++)
         {
             customerFill[i] = new Customer();
-            CustomersList.Add(customerFill[i]);
             customerFill[i].CreateCustomer();
-        
+            CustomersList.Add(customerFill[i]);
+
         }
         
         
