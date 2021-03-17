@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     Vector3 previous;
 
     public Animator anim;
-    public Rigidbody2D rd;
 
     // Start is called before the first frame update
     void Start()
@@ -32,13 +31,11 @@ public class PlayerController : MonoBehaviour
         previous = transform.position;
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
         current = transform.position;
-        //footsteps.Play(0);
-        //footsteps.loop = true;
+
 
         if (((current.magnitude - previous.magnitude) / Time.deltaTime) == 0)
         {
-            //footsteps.Stop();
-            //footsteps.loop = false;
+            footsteps.Stop();
             if (last == 1)
             {
                 anim.Play("Idle_Right");
@@ -90,7 +87,16 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if(up == true)
+            if (footsteps.isPlaying)
+            {
+
+            }
+            else
+            {
+                footsteps.Play();
+            }
+
+            if (up == true)
             {
                 anim.Play("Walk_Backward_Animation");
 
