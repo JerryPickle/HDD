@@ -36,11 +36,11 @@ public class PlayerController : MonoBehaviour
         {
             if (last == 1)
             {
-
+                anim.Play("Idle_Right");
             }
             else if (last == 2)
             {
-
+                anim.Play("Idle_Left");
             }
             else if (last == 3)
             {
@@ -94,10 +94,10 @@ public class PlayerController : MonoBehaviour
                 anim.Play("Walk_Forward_Animation");
             }else if (right == true)
             {
-
+                anim.Play("Walk_Right_Animation");                
             }else if (left == true)
             {
-
+                anim.Play("Walk_Left_Animation");
             }
 
 
