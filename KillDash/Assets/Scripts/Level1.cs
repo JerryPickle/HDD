@@ -27,11 +27,17 @@ public class Level1 : MonoBehaviour
     void InitializeGame()
     {
 
+        //This methods shuffles the character prefab array so that we randomize the sprites of the characters
+        reshuffle(customerPrefabs);
+
         // This function will create all of the games customers at random, it will also make a list with all of the customers, and it will make arrays of each trait type decoy.
         // We can use these arrays to help decide what clues are good/bad/really too good of a clue, by seeing how many decoys are in each array.
-        
         // Create the Baddy at Complete Random, and add him to a Mast list of Customers.
+
+        badguy = gameObject.AddComponent<Customer>() as Customer;
+        badguy = customerPrefabs[currentCustomers];
         badguy.CreateCustomer();
+        badguy.isKiller = true;
         CustomersList.Add(badguy);
         currentCustomers++;
 
@@ -41,7 +47,7 @@ public class Level1 : MonoBehaviour
 
         for (int i = 0; i < favPizzaDecoys; i++)
         {
-            Customer newCustomer;
+            Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
             newCustomer.CreateCustomer();
             newCustomer.favPizza = badguy.favPizza;
@@ -53,7 +59,7 @@ public class Level1 : MonoBehaviour
 
         for (int i = 0; i < favDrinkDecoys; i++)
         {
-            Customer newCustomer;
+            Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
             newCustomer.CreateCustomer();
             newCustomer.favDrink = badguy.favDrink;
@@ -65,7 +71,7 @@ public class Level1 : MonoBehaviour
 
         for (int i = 0; i < favSideDecoys; i++)
         {
-            Customer newCustomer;
+            Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
             newCustomer.CreateCustomer();
             newCustomer.favSideFood = badguy.favSideFood;
@@ -77,7 +83,7 @@ public class Level1 : MonoBehaviour
 
         for (int i = 0; i < HatePizzaDecoys; i++)
         {
-            Customer newCustomer;
+            Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
             newCustomer.CreateCustomer();
             newCustomer.hatePizza = badguy.hatePizza;
@@ -89,7 +95,7 @@ public class Level1 : MonoBehaviour
 
         for (int i = 0; i < HateDrinkDecoys; i++)
         {
-            Customer newCustomer;
+            Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
             newCustomer.CreateCustomer();
             newCustomer.hateDrink = badguy.hateDrink;
@@ -101,7 +107,7 @@ public class Level1 : MonoBehaviour
 
         for (int i = 0; i < HowTipDecoys; i++)
         {
-            Customer newCustomer;
+            Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
             newCustomer.CreateCustomer();
             newCustomer.howTip = badguy.howTip;
@@ -113,7 +119,7 @@ public class Level1 : MonoBehaviour
 
         for (int i = 0; i < MoodDecoys; i++)
         {
-            Customer newCustomer;
+            Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
             newCustomer.CreateCustomer();
             newCustomer.mood = badguy.mood;
@@ -128,12 +134,18 @@ public class Level1 : MonoBehaviour
 
         for (int i = 0; i < customersRemaining; i++)
         {
-            Customer newCustomer;
+            Customer newCustomer = gameObject.AddComponent<Customer>() as Customer;
             newCustomer = customerPrefabs[currentCustomers];
             newCustomer.CreateCustomer();
             CustomersList.Add(newCustomer);
             currentCustomers++;
 
+        }
+
+        for(int i = 0; i < CustomersList.Count; i++)
+        {
+            Debug.Log("Customer " + i);
+            CustomersList[i].PrintCustomer();
         }
         
         
@@ -146,6 +158,18 @@ public class Level1 : MonoBehaviour
         
     }
 
+    void reshuffle(Customer[] customers)
+    {
+        // Knuth shuffle algorithm :: courtesy of Wikipedia :)
+        for (int t = 0; t < customers.Length; t++)
+        {
+            Customer tmp = customers[t];
+            int r = Random.Range(t, customers.Length);
+            customers[t] = customers[r];
+            customers[r] = tmp;
+        }
+    }
 
-   
+
+
 }

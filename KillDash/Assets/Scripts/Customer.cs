@@ -17,6 +17,7 @@ public class Customer : MonoBehaviour
     public string favSideFood = "-1";
     public string hatePizza = "-1";
     public string hateDrink = "-1";
+    public bool isKiller = false;
     [SerializeField]SpriteRenderer thisSprite;
 
 
@@ -113,10 +114,15 @@ public class Customer : MonoBehaviour
             }
         }
 
-        // Adds one to the total customers created in the game.
 
+
+    }
+
+    public void PrintCustomer()
+    {
+        Debug.Log("IsKiller: " + isKiller);
         Debug.Log("Mood = " + mood);
-        Debug.Log("How Tip = " +howTip);
+        Debug.Log("How Tip = " + howTip);
         Debug.Log("favDrink = " + favDrink);
         Debug.Log("favPizza = " + favPizza);
         Debug.Log("favSideFood = " + favSideFood);
