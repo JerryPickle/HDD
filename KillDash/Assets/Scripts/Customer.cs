@@ -22,15 +22,41 @@ public class Customer : MonoBehaviour
     {
 
         mood = waitTimes[Random.Range(0, 2)];
+        howTip = ((Tips)Random.Range(0, 2)).ToString("g");
+        int numDrink = Random.Range(0, 4);
+        favDrink = ((Drinks)numDrink).ToString("g");
+        int numPizza = Random.Range(0, 4);
+        favPizza = ((Pizza)numPizza).ToString("g");
+        favSideFood = ((SideFood)Random.Range(0, 4)).ToString("g");
+        int newNumPizza = Random.Range(0, 4);
+        int newNumDrink = Random.Range(0, 4);
 
+        while (newNumPizza == numPizza)
+        {
+            newNumPizza = Random.Range(0, 4);
+        }
+        hatePizza = ((Pizza)newNumPizza).ToString("g");
 
+        while (newNumDrink == numDrink)
+        {
+            newNumDrink = Random.Range(0, 4);
+        }
+        hateDrink = ((Drinks)newNumDrink).ToString("g");
+
+        print(mood);
+        print(howTip);
+        print(favDrink);
+        print(favPizza);
+        print(favSideFood);
+        print(hatePizza);
+        print(hateDrink);
 
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        CreateCustomer();
 
     }
 
