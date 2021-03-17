@@ -11,6 +11,7 @@ public class PlayerInventory : MonoBehaviour
     public bool hasSide;
     public bool hasPoison;
     int money = 0;
+    List<FoodOrder> orders;
 
 
     // Start is called before the first frame update
