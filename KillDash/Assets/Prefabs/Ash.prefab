@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1096878803605040920}
   - component: {fileID: 858477076238923350}
   - component: {fileID: 601946873}
+  - component: {fileID: 240479210460864806}
   m_Layer: 0
   m_Name: Ash
   m_TagString: Untagged
@@ -274,3 +275,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &240479210460864806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096878803605040924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447a84b8a049ca645872b61a6f804abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasDough: 0
+  hasSauce: 0
+  hasTopping: 0
+  hasDrink: 0
+  hasSide: 0
+  hasPoison: 0

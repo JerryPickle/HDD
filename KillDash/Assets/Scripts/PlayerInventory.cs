@@ -10,6 +10,7 @@ public class PlayerInventory : MonoBehaviour
     public bool hasDrink;
     public bool hasSide;
     public bool hasPoison;
+    int money = 0;
 
 
     // Start is called before the first frame update
