@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
-    enum WaitTime : ushort {GoodMood = 55, Neutral = 45, BadMood = 35 } 
+    int[] waitTimes = { 55, 45, 35 };
     enum Tips {Extra, Normal, None}
     enum Drinks {Coke, Juice, Milkshake, Orange_Juice, Garlic_Juice}
     enum Pizza {Cheese, Pepperoni, Pineapple, Meat_Lovers, The_Garlic_Special}
     enum SideFood {Fries,Tots,Chips,Breadsticks,The_Garlic_Surprise}
 
+    int mood;
+    string howTip;
+    string favDrink;
+    string favPizza;
+    string favSideFood;
+    string hatePizza;
+    string hateDrink;
 
     private void CreateCustomer()
     {
-        
+
+        mood = waitTimes[Random.Range(0, 2)];
+
+
+
     }
 
     // Start is called before the first frame update
