@@ -18,6 +18,7 @@ public class Customer : MonoBehaviour
     public string hatePizza = "-1";
     public string hateDrink = "-1";
     public bool isKiller = false;
+    public FoodOrder myOrder;
     [SerializeField]SpriteRenderer thisSprite;
 
 
@@ -25,6 +26,7 @@ public class Customer : MonoBehaviour
 
     public void CreateCustomer()
     {
+        myOrder = GetComponent<FoodOrder>();
 
         //Randomly Generate Attributes
         if(mood == -1)
@@ -114,7 +116,15 @@ public class Customer : MonoBehaviour
             }
         }
 
+        CreateOrder();
 
+    }
+
+    //Creates an order object with the customers favorite pizza, drink, and sidefood
+    private void CreateOrder()
+    {
+
+        myOrder.CreateOrder(favPizza,favDrink,favSideFood);
 
     }
 
@@ -136,7 +146,7 @@ public class Customer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        CreateCustomer();
     }
 
     // Update is called once per frame
