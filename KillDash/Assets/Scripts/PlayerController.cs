@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public Transform movePoint;
+    [SerializeField] public AudioSource footsteps;
 
     bool up = false;
     bool down = false;
@@ -31,9 +32,13 @@ public class PlayerController : MonoBehaviour
         previous = transform.position;
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
         current = transform.position;
+        //footsteps.Play(0);
+        //footsteps.loop = true;
 
-        if(((current.magnitude - previous.magnitude) / Time.deltaTime) == 0)
+        if (((current.magnitude - previous.magnitude) / Time.deltaTime) == 0)
         {
+            //footsteps.Stop();
+            //footsteps.loop = false;
             if (last == 1)
             {
                 anim.Play("Idle_Right");
@@ -92,10 +97,12 @@ public class PlayerController : MonoBehaviour
             }else if (down == true)
             {
                 anim.Play("Walk_Forward_Animation");
-            }else if (right == true)
+            }
+            else if (right == true)
             {
-                anim.Play("Walk_Right_Animation");                
-            }else if (left == true)
+                anim.Play("Walk_Right_Animation");
+            }
+            else if (left == true)
             {
                 anim.Play("Walk_Left_Animation");
             }
