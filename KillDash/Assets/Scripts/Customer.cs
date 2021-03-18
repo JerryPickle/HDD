@@ -128,7 +128,6 @@ public class Customer : MonoBehaviour
 
     }
 
-
     public void PrintCustomer()
     {
         Debug.Log("IsKiller: " + isKiller);
@@ -155,18 +154,4 @@ public class Customer : MonoBehaviour
     {
         
     }
-
-    public void ClearCustomer()
-    {
-
-        mood = -1;
-        howTip = "-1";
-        favDrink = "-1";
-        favPizza = "-1";
-        favSideFood = "-1";
-        hatePizza = "-1";
-        hateDrink = "-1";
-
-    }
-
 }
