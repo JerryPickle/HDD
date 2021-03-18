@@ -105,6 +105,7 @@ MonoBehaviour:
   hatePizza: -1
   hateDrink: -1
   isKiller: 0
+  myOrder: {fileID: 9017983960319671078}
   thisSprite: {fileID: 5360415672743195145}
 --- !u!61 &-1707629332056807339
 BoxCollider2D:

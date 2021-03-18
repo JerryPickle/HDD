@@ -11,6 +11,7 @@ public class Level1 : MonoBehaviour
     private PlayerController player;
     int currentCustomers = 0;
     public Customer[] customerPrefabs;
+    public Transform spawnPoint;
     [SerializeField]public int decoyRangeMax = 3;
     [SerializeField]public int decoyRangeMin = 1;
     [SerializeField] public int totalCustomers = 20;
@@ -22,6 +23,15 @@ public class Level1 : MonoBehaviour
     void Start()
     {
         InitializeGame();
+        //SpawnCharacter();
+
+    }
+
+    void SpawnCharacter()
+    {
+        Customer newCustomer;
+        newCustomer = Instantiate(CustomersList[0], spawnPoint.position, Quaternion.identity);
+
 
     }
 

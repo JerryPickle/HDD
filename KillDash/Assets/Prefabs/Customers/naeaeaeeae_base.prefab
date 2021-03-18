@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6180706929555332320}
   - component: {fileID: 5852291398751996085}
   - component: {fileID: -6683281515248150092}
+  - component: {fileID: 628300011752280147}
   m_Layer: 3
   m_Name: naeaeaeeae_base
   m_TagString: Customer
@@ -104,6 +105,7 @@ MonoBehaviour:
   hatePizza: -1
   hateDrink: -1
   isKiller: 0
+  myOrder: {fileID: 628300011752280147}
   thisSprite: {fileID: 6180706929555332320}
 --- !u!61 &-6683281515248150092
 BoxCollider2D:
@@ -131,3 +133,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0409302, y: 1.1643822}
   m_EdgeRadius: 0
+--- !u!114 &628300011752280147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943423503232065957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e16c291dde5aa41a6af9a7f056a1ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pizza: 
+  drink: 
+  side: 

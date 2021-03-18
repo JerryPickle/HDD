@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4881404272021289399
+--- !u!1 &3826879732954461727
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5224144716335182502}
-  - component: {fileID: 7652361593438015523}
-  - component: {fileID: 8241617030829749934}
-  - component: {fileID: 7643360913682043075}
-  - component: {fileID: 9220833755589162420}
-  m_Layer: 3
-  m_Name: glumpy_base
-  m_TagString: Customer
+  - component: {fileID: 7746947576123894514}
+  - component: {fileID: 7779442090196989618}
+  - component: {fileID: 6839720948594972515}
+  - component: {fileID: 426497323801510759}
+  - component: {fileID: 7511524702800523136}
+  m_Layer: 0
+  m_Name: MEMOman
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5224144716335182502
+--- !u!4 &7746947576123894514
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4881404272021289399}
+  m_GameObject: {fileID: 3826879732954461727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0214622, y: -1.5353341, z: 0}
+  m_LocalPosition: {x: 0.0044366717, y: -3.4225676, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7652361593438015523
+--- !u!212 &7779442090196989618
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4881404272021289399}
+  m_GameObject: {fileID: 3826879732954461727}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,24 +74,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a1aa4ec0a23bb0b45a6a48b6fe05352d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f4d3315ddd76978448e438700851c627, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.35, y: 3}
+  m_Size: {x: 1.28, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8241617030829749934
+--- !u!114 &6839720948594972515
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4881404272021289399}
+  m_GameObject: {fileID: 3826879732954461727}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7cda6975d572b040aad0999432d28f1, type: 3}
@@ -105,41 +105,15 @@ MonoBehaviour:
   hatePizza: -1
   hateDrink: -1
   isKiller: 0
-  myOrder: {fileID: 9220833755589162420}
-  thisSprite: {fileID: 7652361593438015523}
---- !u!61 &7643360913682043075
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4881404272021289399}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.006038189, y: -0.9419618}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.35, y: 3}
-    newSize: {x: 1.35, y: 3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.072242, y: 1.1160764}
-  m_EdgeRadius: 0
---- !u!114 &9220833755589162420
+  myOrder: {fileID: 426497323801510759}
+  thisSprite: {fileID: 7779442090196989618}
+--- !u!114 &426497323801510759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4881404272021289399}
+  m_GameObject: {fileID: 3826879732954461727}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4e16c291dde5aa41a6af9a7f056a1ae, type: 3}
@@ -148,3 +122,29 @@ MonoBehaviour:
   pizza: 
   drink: 
   side: 
+--- !u!61 &7511524702800523136
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826879732954461727}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0330652, y: -0.87071645}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 3}
+    newSize: {x: 1.28, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0375221, y: 1.2585671}
+  m_EdgeRadius: 0
