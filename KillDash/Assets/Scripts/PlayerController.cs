@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public Transform movePoint;
     [SerializeField] public AudioSource footsteps;
+    public LayerMask movementStopper;
+    public BoxCollider2D bc;
 
     bool up = false;
     bool down = false;
@@ -60,29 +62,34 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetAxisRaw("Horizontal") == 1f)
             {
-                movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
-                right = true;
-                last = 1;
+
+                    movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+                    right = true;
+                    last = 1;
+
 
             } else if(Input.GetAxisRaw("Horizontal") == -1f)
             {
-                movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
-                left = true;
-                last = 2;
+                if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), 0.2f, movementStopper)){
+                    movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+                    left = true;
+                    last = 2;
+                }
+
             }
             else if (Input.GetAxisRaw("Vertical") == 1f)
             {
-                movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
-                up = true;
-                //anim.Play("Walk_Backward_Animation");
-                last = 3;
+                    movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                    up = true;
+                    last = 3;
+
 
             } else if (Input.GetAxisRaw("Vertical") == -1f)
             {
-                movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
-                down = true;
-                //anim.Play("Walk_Forward_Animation");
-                last = 4;
+                    movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                    down = true;
+                    last = 4;
+
             }
         }
         else
