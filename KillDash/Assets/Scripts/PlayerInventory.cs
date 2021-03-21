@@ -11,6 +11,12 @@ public class PlayerInventory : MonoBehaviour
     public bool hasSide;
     public bool hasPoison;
     int money;
+    public string doughType;
+    public string sauceType;
+    public string toppingType;
+    public string drinkType;
+    public string sideType;
+
     List<FoodOrder> orders;
 
 
@@ -42,7 +48,8 @@ public class PlayerInventory : MonoBehaviour
     void Start()
     {
         money = 0;
-        //orders.Clear();
+        doughType = sauceType = toppingType = drinkType = sideType = "none";
+        orders = new List<FoodOrder>();
     }
 
     
